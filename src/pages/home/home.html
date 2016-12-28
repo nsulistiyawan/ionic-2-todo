@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic 2 ToDo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="newTodo" (keyup.enter)="addTodo()" type="text" placeholder="What to do?"></ion-input>
+    </ion-item>
+    <ion-item *ngFor="let todo of todos">
+      <ion-checkbox color="dark" [(ngModel)]="todo.checked"></ion-checkbox>
+      <ion-label> {{ todo.value }} </ion-label>
+       <button (click)="deleteTodo(todo)"  ion-button color="danger" outline icon-left item-right>
+        <ion-icon name='remove-circle' is-active="false"></ion-icon> Remove
+      </button>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>
