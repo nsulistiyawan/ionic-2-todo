@@ -34,20 +34,7 @@ export class HomePage {
     }
   }
 
-  loadCheckedTodo(){
-
-  }
-
-  loadAllTodo(){
-
-  }
-
-  loadUncheckedTodo(){
-
-  }
-
-
-
+  
   loadTodo() {
     this.todos = [
       {
